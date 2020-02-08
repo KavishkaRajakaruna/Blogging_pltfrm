@@ -16,5 +16,7 @@ Route::get('/', function () {
 });
 
 Route::view('write', 'internal.write');
-Route::view('posts', 'internal.blogs');
+Route::view('posts', 'internal.blog');
 Route::view('about', 'internal.about');
+
+Route::get('posts' , 'PostsController@list');
