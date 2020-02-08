@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::view('write', 'internal.write');
+Route::view('posts', 'internal.blogs');
+Route::view('about', 'internal.about');
