@@ -3,7 +3,7 @@
 @section('topic')
     <div class="jumbotron"> <h2>Blogs</h2></div>
 @endsection
-@section('content-lft')
+@section('content-mid')
     @foreach($posts as $post)
         <div class="card" style="width: 18rem;">
             <div class="card-body">

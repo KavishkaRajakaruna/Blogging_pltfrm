@@ -20,3 +20,4 @@ Route::view('posts', 'internal.blog');
 Route::view('about', 'internal.about');
 
 Route::get('posts' , 'PostsController@list');
+Route::post('write', 'PostsController@store');

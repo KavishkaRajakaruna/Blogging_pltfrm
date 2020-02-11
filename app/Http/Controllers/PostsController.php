@@ -12,7 +12,22 @@ class PostsController extends Controller
 
         return view('internal/blog', [
             'posts' => $posts
-            ]);
+        ]);
+    }
+
+    public function store(){
+        $data = request() ->validate([
+            'title' => 'required|min:5',
+            'body' => 'required|min:15',
+        ]);
+
+        $post = new Post;
+        $post -> title = request('title');
+        $post -> author = request('author');
+        $post -> body = request('body');
+        $post -> save();
+        return redirect('posts');
+
     }
 
 }
